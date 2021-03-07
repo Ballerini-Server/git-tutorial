@@ -2,6 +2,10 @@
 
 Esse é um tutorial para aqueles que não sabem nada sobre git, o intuito desse repositório é explicar o básico sobre como manipular arquivos no git e como fazer commit/push/pull requests
 
+#### Disclaimer
+
+Só gostaria de lembrar de tomar cuidado quando falamos de git e github, apesar de serem usadas em conjunto, são duas coisas diferentes, git é um *sistema de controle de versões*, muito usado para desenvolvimento de softwares; Já o github é uma *plataforma de hospedagem de código* que usa git para controle de versão;
+
 ## Instalando o git
 
 Antes de tudo, você precisa é ter o git instalado, verifique se ele está instalado com o seguinte comando:
@@ -155,3 +159,55 @@ Por fim, existe o comando `git log` que mais mostrar o que aconteceu no seu proj
 <img src="./assets/gitlog.png" width="500px">
 
 O histórico do git me mostra que a primeira coisa que fiz foi um commit com o nome de "Adicionando fotos da pasta assets", num Domingo ("Sun" de Sunday) no dia 7 de Março (Mar 7) as 09:42:02 (horas:minutos:segundos) de 2021 com o fuso-horário -0300 (indicando -03:00)
+
+## Push/Pull
+
+Entendo que possa ser contra-intuitivo de início, mas *PUSH* é quando você quer *EMPURRAR* o seu código para algum lugar, e *PULL* é quando você quer *PUXAR* o código de algum lugar, mas juro que a culpa não é minha, pois o git foi feito em inglês. E é importante enteder esses conceitos, mas o que seria esse *LUGAR*?
+
+### Remote
+
+Esse Lugar é chamado pelo git de *REMOTE*, e ele pode ser qualquer local: o servidor privado da sua empresa, o github, o servidor onde o seu programa está ativo, como DigitalOcean, Vercel, AWS, etc.
+
+Vamos criar um repositório no github, e fazer um PUSH para ele;
+
+<img src="./assets/newrepository.png" width="500px">
+
+Como configurações no github, eu deixei ele como repositório Privado, e selecionei para criar um README.md, outras opções importantes é sobre adicionar um .gitignore e uma licença
+
+#### Tangente sobre .gitignore e license
+
+* .gitignore: É um arquivo que vai definir quais pastas ou arquivos o git não deve se preocupar, pois são informações desnecessárias para o repositório de uma forma geral, alguns exemplos de arquivos a serem ignorados pelo git são:
+    * node_modules: É uma pasta usada no nodejs (javascript), onde todas as bibliotecas ficam ali, dentro da pasta do seu projeto, e como ela pode ter muitas, mas muitas informações, ela é ignorada, e no momento de alguém copiar o projeto, esse alguém deve instalar as dependências com algum comando específico do node;
+    * .env: É um arquivo que vai definir as variáveis de ambiente, e essa variáveis são geralmente sensíveis, exemplos de variáveis que são guardadas nesse arquivo: chave de acesso a serviços externos (AWS para envio de e-mails (SES) ou para guardar arquivos (S3 bucket));
+    * Configurações de acesso aos bancos de dados: Apesar de essas informações também poderem estar em .env, algumas bibliotecas as vezes usam suas próprias formas de conectar no banco de dados, e se for uma conexão como a conexão no mongodb.com por exemplo, é importante que o texto não esteja explícito no seu código, pois quem tiver acesso ao seu projeto, também vai ter acesso ao banco de dados;
+* Licença: Não vou me aprofundar nesse tema, mas licença é o que vai definir quem e como podem usar o seu código, algumas licenças são de uso aberto permitindo que você use/copie/altere/venda o seu projeto e a interação do seu projeto com esse programa, outras vão te dar limitações em um ou outro ponto, vou deixar esse vídeo do [Código Fonte TV](https://www.youtube.com/watch?v=fPfzp6ov2bQ) para dar um pouco mais de informações, mas ainda recomendo que pesquise a parte sobre; 
+
+#### Remote Add
+
+Agora o nosso repositório está criado no github, e temos que deixar o repositório lá atualizado, para que todos tenham acesso ao nosso código, para isso vamos adicionar o repositório do github como remote do nosso projeto local:
+
+```
+git remote add origin https://github.com/Matan18/git-tutorial.git
+```
+
+O comando não é complexo, o que estamos fazendo, basicamenteo, é acessando a funcionalidade *add* do *remote* do *git* passando como parâmetros o apelido desse remote "origin", e o local dele `https://github.com/Matan18/git-tutorial.git`, podemos verificar todos os repositórios que adicionamos com o comando `git remote -v`, e temos a seguinte imagem:
+
+<img src="./assets/gitremoteverbose.png" width="500px">
+
+Temos 2 remotes, pois um serve para fazermos a busca do projeto (fetch), e outro para a publicação dele (push);
+
+Para fazermos a publicação do nosso projeto no github, só temos que digitar o comando;
+
+```
+git push origin main
+```
+
+E temos um erro no comando (eu juro que foi de propósito);
+
+<img src="./assets/gitpusherror.png" width="500px">
+
+Esse erro acontece pois o nosso repositório no github tem informações que não existem no nosso projeto local (criamos o arquivo README.md com o título do nosso projeto lá no momento que criamos o repositório, e aquele arquivo não aparece no nosso histórico local), para termos esse arquivo localmente, temos que fazer a busca dessas informações, e usaremos o *pull* para puxar as informações;
+
+```
+git pull origin main
+```
