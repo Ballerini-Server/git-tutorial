@@ -229,9 +229,13 @@ Isso indica que os dois arquivos contem informações completamente diferentes, 
 ```
 
 O que você deve fazer é escolher se quer mander o código que já estava, ou o código novo, você deve apagar o código que não quer mais, e depois apagar as linhas que a seguir;
+
 ```
 <<<<<<< HEAD
 =======
 >>>>>>> código hash do commit
 ```
-Você tem a opção também de manter os dois blocos, nesse caso, só apagar as linhas que mandei acima
+
+Você tem a opção também de manter os dois blocos, nesse caso, só apagar as linhas que mandei acima;
+
+Feito as alterações, pode fazer o comando `git add ` normalmente, depois `git commit -m "Merge branch 'main' of https://github.com/Matan18/git-tutorial into main"`, é uma mensagem explicando que foi realizado a fusão de duas branchs.
