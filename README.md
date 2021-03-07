@@ -275,7 +275,7 @@ Assim que quiser, pode confirmar as alterações clicando em Merge Pull Request.
 
 ## Importante
 
-Lembrando, sempre que houver alguma alteração na branch principal no github, se você estiver estiver trabalhando nessa branch, recomendo fazer o `git pull` novamente para garantir que o seu código está atualizado.
+Lembrando, sempre que houver alguma alteração na branch principal no github, se você estiver estiver trabalhando nessa branch, recomendo fazer o `git pull` novamente para garantir que o seu código está atualizado. Se o repositório principal não é seu, adicione ele como remote, e faça o `git pull` dele, depois mande através de `git push` para o seu próprio repositório
 
 Apesar de eu ter falado que não iria comentar muito sobre branchs, espero que vocês tenham entendido pelo menos o básico sobre elas, pois pode ajudar muito na hora de montar o seu projeto em grupo, assim, cada pessoa trabalha em suas próprias branchs, e apenas do lider do projeto confirma as alterações das branchs alternativas para a branch principal, isso é importante, pois se duas pessoas editam o código ao mesmo tempo, na mesma branch, o git vai entrar em conflito em algum momento, e pode dar um pouco de dor de cabeça para resolver.
 
