@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Tutorial de Git
 
 Esse é um tutorial para aqueles que não sabem nada sobre git, o intuito desse repositório é explicar o básico sobre como manipular arquivos no git e como fazer commit/push/pull requests
@@ -221,19 +220,19 @@ Fazendo isso temos uma espécie de erro no nosso git, mas não é dificil de res
 Isso indica que os dois arquivos contem informações completamente diferentes, por isso o deixa você escolher qual informação deve ser mantida, e o seu arquivo vai ser alterado com base nessas informações da seguinte forma:
 
 ```
-<<<<<<< HEAD
+ <<<<<<< HEAD
 {bloco de informações que já estavam no projeto}
-=======
+ =======
 {bloco de código novo no projeto}
->>>>>>> código hash do commit
+ >>>>>>> código hash do commit
 ```
 
 O que você deve fazer é escolher se quer mander o código que já estava, ou o código novo, você deve apagar o código que não quer mais, e depois apagar as linhas que a seguir;
 
 ```
-<<<<<<< HEAD
-=======
->>>>>>> código hash do commit
+ <<<<<<< HEAD
+ =======
+ >>>>>>> código hash do commit
 ```
 
 Você tem a opção também de manter os dois blocos, nesse caso, só apagar as linhas que mandei acima;
@@ -246,4 +245,40 @@ Agora precisamos mandar o código para o nosso github, finalmente com todas as a
 git push origin main
 ```
 
-//oie matan só passando pra dizer que esse tutorial está ficando incrível
+## Pull Request
+
+Agora que já estamos com o código atualizado no github, como outras pessoas podem ter acesso e editar o código?
+Através de Pull Requests!
+
+Para poder fazer um pull request, você deve fazer o fork do repositório (tem um botão escrito fork em cima do repositório, basta clicar lá e ir confirmando), assim você terá uma cópia do código no seu github mesmo, e por enquanto é nele que você vai mexer, e pra mexer no seu repositório basta você seguir os passos que expliquei acima (alterar o código, `git add ...`, `git commit ...`, `git push ...`), assim que o código no seu github estiver atualizado, vai aparecer uma mensagem mostrando que você pode fazer um pull request.
+
+<img src="./assets/pullrequest.png" width="500px">
+
+Você só precisa clicar ali, e seguir os passos. Vai aparecer duas caixas de texto, uma para um título resumido, outra para você descrever suas alterações.
+
+<img src="./assets/pullrequestcomment.png" width="500px">
+
+Basta preencher (se achar necessário), depois clicar em Create Pull Request novamente. 
+Vai aparecer uma nova página informando que o Pull Request foi aberto, agora está nas mãos do dono do repositório confirmar.
+
+<img src="./assets/pullrequestopened.png" width="500px">
+
+O dono do repositório vai receber a notificação que há um pull request, também poderá verificar na aba de Pull Requests do seu repositório .
+
+<img src="./assets/prtab.png" width="300px">
+
+E ao acessar o pull request em questão, vai ver uma página onde pode discutir sobre as alterações, exigir novas alterações, ou até tirar dúvidas sobre as alterações se necessário.
+
+<img src="./assets/recievedpullrequest.png" width="500px">
+
+Assim que quiser, pode confirmar as alterações clicando em Merge Pull Request.
+
+## Importante
+
+Lembrando, sempre que houver alguma alteração na branch principal no github, se você estiver estiver trabalhando nessa branch, recomendo fazer o `git pull` novamente para garantir que o seu código está atualizado.
+
+Apesar de eu ter falado que não iria comentar muito sobre branchs, espero que vocês tenham entendido pelo menos o básico sobre elas, pois pode ajudar muito na hora de montar o seu projeto em grupo, assim, cada pessoa trabalha em suas próprias branchs, e apenas do lider do projeto confirma as alterações das branchs alternativas para a branch principal, isso é importante, pois se duas pessoas editam o código ao mesmo tempo, na mesma branch, o git vai entrar em conflito em algum momento, e pode dar um pouco de dor de cabeça para resolver.
+
+O comando para criar novas branchs é `git checkout -b novabranch`, na verdade esse comando é pra você mudar de branch, é passado a flag "-b" para que assim, o git vai criar essa branch se não existir.
+
+Quando for necessário pegar as informações de uma branch pra outra, você da checkout para a branch que vai receber o código `git checkou main` depois usa o comando merge receber as alterações da nova branch `git merge novabranch`
