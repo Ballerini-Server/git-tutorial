@@ -143,3 +143,15 @@ Usar o "." no final indica que você está adicionando tudo que está dentro da 
 <img src="./assets/gitstatus5.png" width="500px">
 
 <img src="./assets/gitstatus5vscode.png" width="500px">
+
+No terminal, vejam que tudo é muito parecido, todos os arquivos agora estão em "Changes to be committed", a novidade é que o README.md está marcado como "modified:", no vscode aparecem todos os arquivos no campo "Staged Changes", e ao fazer o commit, todos sairão de lá, e o projeto estará em uma nova versão, `git commit -m "Último commit"`, vou deixar essa imagem mostrando o que aparece quando você faz o commit;
+
+<img src="./assets/gitcommit.png" width="500px">
+
+Vejam, 7 arquivos foram salvos (eu coloquei algumas imagems a mais), 31 linhas inseridas, 3 linhas deletadas (eu fiz algumas alterações nesse texto também, que vovês só vão perceber se baixarem o projeto, e começarem a voltar nos commits);
+
+Por fim, existe o comando `git log` que mais mostrar o que aconteceu no seu projeto ao longo do tempo, vamos dar uma olhada no nosso projeto
+
+<img src="./assets/gitlog.png" width="500px">
+
+O histórico do git me mostra que a primeira coisa que fiz foi um commit com o nome de "Adicionando fotos da pasta assets", num Domingo ("Sun" de Sunday) no dia 7 de Março (Mar 7) as 09:42:02 (horas:minutos:segundos) de 2021 com o fuso-horário -0300 (indicando -03:00)
