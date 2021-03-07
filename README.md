@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tutorial de Git
 
 Esse é um tutorial para aqueles que não sabem nada sobre git, o intuito desse repositório é explicar o básico sobre como manipular arquivos no git e como fazer commit/push/pull requests
@@ -211,3 +212,26 @@ Esse erro acontece pois o nosso repositório no github tem informações que nã
 ```
 git pull origin main --allow-unrelated-histories
 ```
+
+Fazendo isso temos uma espécie de erro no nosso git, mas não é dificil de resolver
+
+<img src="./assets/gitmergeerror.png" width="500px">
+<img src="./assets/gitmergeerrorvscode.png" width="500px">
+
+Isso indica que os dois arquivos contem informações completamente diferentes, por isso o deixa você escolher qual informação deve ser mantida, e o seu arquivo vai ser alterado com base nessas informações da seguinte forma:
+
+```
+<<<<<<< HEAD
+{bloco de informações que já estavam no projeto}
+=======
+{bloco de código novo no projeto}
+>>>>>>> código hash do commit
+```
+
+O que você deve fazer é escolher se quer mander o código que já estava, ou o código novo, você deve apagar o código que não quer mais, e depois apagar as linhas que a seguir;
+```
+<<<<<<< HEAD
+=======
+>>>>>>> código hash do commit
+```
+Você tem a opção também de manter os dois blocos, nesse caso, só apagar as linhas que mandei acima
