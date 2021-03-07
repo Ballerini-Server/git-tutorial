@@ -245,3 +245,5 @@ Agora precisamos mandar o código para o nosso github, finalmente com todas as a
 ```
 git push origin main
 ```
+
+//oie matan só passando pra dizer que esse tutorial está ficando incrível
