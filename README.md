@@ -96,7 +96,7 @@ Os arquivos *Untracked* ficam com um 'U' do lado, e também mostra o caminho ond
 
 Um commit é quando você salva uma alteração no seu projeto, quando o projeto como um todo tem uma nova versão do código, mas nem sempre você quer que todas as alterações que você fez sejam salvas imediatamente nessa nova versão, porque algumas funcionalidades novas ainda não estão concluídas, é pra isso que serve o *Stage*.
 
-Vamos adicionar a pasta assets ao Stage para ver o que acontece, para adicionar a pasta, você só precisa digitar `git add assets` vamos ver no terminal, e no vscode o que acontece agora, `git status`;
+Vamos adicionar a pasta assets ao Stage para ver o que acontece, para adicionar a pasta, você só precisa digitar `git add assets` vamos ver no terminal e no vscode o que acontece agora, `git status`;
 
 <img src="./assets/gitstatusassets.png" width="500px">
 <img src="./assets/gitstatusassetsvscode.png" width="500px">
@@ -106,12 +106,40 @@ Também veja que o README.md não teve nenhuma alteração, ele continua igual a
 
 ### Commit
 
-Vamos fazer finalmente um *Commit*, digite no terminal `git commit -m "Adicionando fotos da pasta assets"`, e vamos ver o que aparece novamente com `git status`
+Vamos fazer finalmente um *Commit*, digite no terminal:
+
+```
+git commit -m "Adicionando fotos da pasta assets"
+```
+
+Sempre que fazemos um commit passamos a flag -m e entre áspas uma descrição do que foi feito, essa descrição deve ter menos de 50 caracteres, por isso existem alguns padrões de como escrever essas mensagens, e também de quais arquivos você faz commit, pois você não consegue descrever mais de uma ação, por exemplo: "Criei rota de autenticação/criação de usuário, e rota de listagem de serviços", essa mensagem é muito grande, e dependendo das ações que fez, podem te levar a fazer várias abreviações ao ponto da mensagem não ser compreendida, mas não vou me extender mais ainda nesse assunto hoje, e vamos o que o git nos mostra com o comando `git status` novamente
 
 <img src="./assets/gitstatus2.png" width="500px">
 
 <img src="./assets/gitstatus2vscode.png" width="500px">
 
 Veja que os arquivos da pasta assets não estão mais visíveis como alterados, isso porque eles foram commitados, ou seja, foram salvos em uma nova versão do projeto.
-Agora só o que aparece é o README.md da forma que tínhamos antes, vamos fazer um commit, para isso, lembrem-se: vamos adicionar o arquivo ao *Stage* com `git add README.md`e depois vamos fazer um commit
+Agora só o que aparece é o README.md da forma que tínhamos antes, vamos fazer um commit adicionando ele, para isso, lembrem-se: vamos adicionar o arquivo ao *Stage* com `git add README.md`e depois vamos fazer um commit com `git commit -m 'Adicionando README.md'`, e vamos ver novamente o que o git nos mostra com `git status`;
 
+<img src="./assets/gitstatus3.png" width="500px">
+
+<img src="./assets/gitstatus3vscode.png" width="500px">
+
+Absolutamente nada, o nosso projeto está atualizado, com as últimas alterações feitas até agora, porém, percebam que eu ainda não terminei de fazer esse tutorial, e ainda estou adicionando fotos e mensagens no README.md, vamos ver o que aparece com essas alterações novamente `git status`;
+
+<img src="./assets/gitstatus4.png" width="500px">
+
+<img src="./assets/gitstatus4vscode.png" width="500px">
+
+Com relação as novas imagens, não tem nenhuma mudança, elas estão marcadas como *Untracked* com o 'U' do lado, porém o nosso README.md está diferente, Ele está num novo campo "Changes not staged for commit", marcado com o 'M' do lado, isso indica que ele foi modificado, tanto é, que no terminal aparece o texto "modified:". 
+Vamos dessa vez adicionar todos os arquivos juntos no próximo commit, e existe um comando pra isso:
+
+```
+git add .
+```
+
+Usar o "." no final indica que você está adicionando tudo que está dentro da nossa pasta principal, uma espiadinha com `git status`novamente:
+
+<img src="./assets/gitstatus5.png" width="500px">
+
+<img src="./assets/gitstatus5vscode.png" width="500px">
