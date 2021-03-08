@@ -281,4 +281,4 @@ Apesar de eu ter falado que não iria comentar muito sobre branchs, espero que v
 
 O comando para criar novas branchs é `git checkout -b novabranch`, na verdade esse comando é pra você mudar de branch, é passado a flag "-b" para que assim, o git vai criar essa branch se não existir.
 
-Quando for necessário pegar as informações de uma branch pra outra, você da checkout para a branch que vai receber o código `git checkou main` depois usa o comando merge receber as alterações da nova branch `git merge novabranch`
+Quando for necessário pegar as informações de uma branch pra outra, você da checkout para a branch que vai receber o código `git checkout main` depois usa o comando merge receber as alterações da nova branch `git merge novabranch`
