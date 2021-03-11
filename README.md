@@ -206,7 +206,7 @@ E temos um erro no comando (eu juro que foi de propósito);
 
 <img src="./assets/gitpusherror.png" width="500px">
 
-Esse erro acontece pois o nosso repositório no github tem informações que não existem no nosso projeto local (criamos o arquivo README.md com o título do nosso projeto lá no momento que criamos o repositório, e aquele arquivo não aparece no nosso histórico local), para termos esse arquivo localmente, temos que fazer a busca dessas informações, e usaremos o *pull* para puxar as informações, precisamos passar uma flag depois do `origin main`, que vai fazer com que o git permita que o histórico não de alterações não esteja de acordo com o github;
+Esse erro acontece pois o nosso repositório no github tem informações que não existem no nosso projeto local (criamos o arquivo README.md com o título do nosso projeto lá no momento que criamos o repositório, e aquele arquivo não aparece no nosso histórico local), para termos esse arquivo localmente, temos que fazer a busca dessas informações, e usaremos o *pull* para puxar as informações, precisamos passar uma flag depois do `origin main`, que vai fazer com que o git permita que o histórico de alterações não esteja de acordo com o github;
 
 ```
 git pull origin main --allow-unrelated-histories
