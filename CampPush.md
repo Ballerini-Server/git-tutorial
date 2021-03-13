@@ -45,17 +45,17 @@ No exemplo que vou dar a vocês estou usando o começo de um projeto da Next Lev
 
 Ao abrir o projeto como pasta, tenho a seguinte imagem
 
-<img src="./assets/moveitfolderhidden.png" width="500px">
+<img src="/assets/moveitfolderhidden.png" width="500px">
 
 Mas, se você já iniciou um projeto git, com o comando `git init`, existem arquivos que estão escondidos, e preciso vê-los:
 * No linux, isso se resolve apertando ctrl+H; 
 * No Windows 10, preciso acessar a aba Exibir e deixar selecionado "Itens ocultos";
 
-<img src="./assets/itensocultos.png" width="500px">
+<img src="/assets/itensocultos.png" width="500px">
 
 E ao fazer isso, tenho a seguinte imagem;
 
-<img src="./assets/moveitfoldernothidden.png" width="500px">
+<img src="/assets/moveitfoldernothidden.png" width="500px">
 
 Essa pasta .git que estão vendo são as informações que o git tem sobre esse repositório (todos os commits realizados, remotes adicionados, etc)
 Se você está utilizando a ideia de monorepo, e cada programa (programa frontend e programa backend por exemplo) está com a própria pasta .git
@@ -76,7 +76,7 @@ Façam o commit o seguinte comando `git commit -m "Commit final"`, no lugar de "
 
 No repositório que compartilhei com os líderes, cliquem no botão verde escrito "code" e terão o link para o remote, copiem esse link;
 
-<img src="./assets/repoclone.png" width="500px">
+<img src="/assets/repoclone.png" width="500px">
 
 Nesse exemplo, o link é `https://github.com/Matan18/git-tutorial.git`, mas certamente cada equipe tem um link diferente. Vocês vão adicionar o link como remote origin, com o seguinte comando;
 
