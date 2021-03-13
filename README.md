@@ -44,7 +44,7 @@ git config --get init.defaultbranch
 
 Eu tive a seguinte resposta
 
-<img src="./assets/gitbranch.png" width="500px">
+<img src="/assets/gitbranch.png" width="500px">
 
 ### Leve tangente sobre Branchs
 
@@ -68,7 +68,7 @@ E vamos conferir se deu tudo certo com o mesmo comando que usamos antes;
 git config --get init.defaultbranch
 ```
 
-<img src="./assets/gitbranchmain.png" width="500px">
+<img src="/assets/gitbranchmain.png" width="500px">
 
 Pronto, agora podemos finalmente fazer commits/pushs sem nos preocuparmos com os erros mais comuns.
 
@@ -76,7 +76,7 @@ Pronto, agora podemos finalmente fazer commits/pushs sem nos preocuparmos com os
 
 Para iniciar um repositório git, basta digitar o comando `git init`, que ele vai criar uma pasta no seu projeto com nome de ".git", e vai começar a se preocupar com as alterações que são feitas no seu projeto.
 
-<img src="./assets/gitinit.png" width="500px">
+<img src="/assets/gitinit.png" width="500px">
 
 ## Observação
 
@@ -88,13 +88,13 @@ Estou usando o vscode como meu editor desse projeto, e vou mandar fotos de como 
 
 Sempre que o seu código está diferente do seu último commit, o git entende que houve uma alteração, essa alteração pode ser, basicamente: Um arquivo foi criado, um arquivo sofreu uma alteração, um arquivo foi deletado, e essas alterações ficam na lista de Changes do seu repositório, uma forma simples de você verificar essas alterações, é você digitar o comando `git status` no seu terminal preferido;
 
-<img src="./assets/gitstatus1.png" width="500px">
+<img src="/assets/gitstatus1.png" width="500px">
 
 Nesse projeto, você pode ver que eu tenho um arquivo e uma pasta "Untracked" com o nome de README.md, e a pasta "assets", os arquivos "Untracked são arquivos/pastas que ainda não existiam antes no projeto, e agora existem.
 
 No vscode, ele mostra assim:
 
-<img src="./assets/gitstatus1vscode.png" width="500px">
+<img src="/assets/gitstatus1vscode.png" width="500px">
 
 Os arquivos *Untracked* ficam com um 'U' do lado, e também mostra o caminho onde encontrar esse arquivos (note que todas as imagens tem uma palavra "assets" do lado, isso indica que essas imagens são encontradas na pasta assets);
 
@@ -104,8 +104,8 @@ Um commit é quando você salva uma alteração no seu projeto, quando o projeto
 
 Vamos adicionar a pasta assets ao Stage para ver o que acontece, para adicionar a pasta, você só precisa digitar `git add assets` vamos ver no terminal e no vscode o que acontece agora, `git status`;
 
-<img src="./assets/gitstatusassets.png" width="500px">
-<img src="./assets/gitstatusassetsvscode.png" width="500px">
+<img src="/assets/gitstatusassets.png" width="500px">
+<img src="/assets/gitstatusassetsvscode.png" width="500px">
 
 Veja que agora no terminal aparece um novo grupo de arquivos, os arquivos que foram adicionados ao Stage tem o título "Changes to be committed", cada arquivo mostrado tem um texto antes "new file:" indicando que o arquivo foi recém adicionado, e não existia antes no projeto, na parte visual do vscode, agora tem também uma nova lista de "Staged Changes" que indicam a mesma coisa que o terminal (arquivos que estão prontos para ser commitados), também esse arquivos tem a letra 'A' no lado, indicando que estão sendo adicionados ao projeto.
 Também veja que o README.md não teve nenhuma alteração, ele continua igual a última foto.
@@ -120,22 +120,22 @@ git commit -m "Adicionando fotos da pasta assets"
 
 Sempre que fazemos um commit passamos a flag -m e entre áspas uma descrição do que foi feito, essa descrição deve ter menos de 50 caracteres, por isso existem alguns padrões de como escrever essas mensagens, e também de quais arquivos você faz commit, pois você não consegue descrever mais de uma ação, por exemplo: "Criei rota de autenticação/criação de usuário, e rota de listagem de serviços", essa mensagem é muito grande, e dependendo das ações que fez, podem te levar a fazer várias abreviações ao ponto da mensagem não ser compreendida, mas não vou me extender mais ainda nesse assunto hoje, e vamos o que o git nos mostra com o comando `git status` novamente
 
-<img src="./assets/gitstatus2.png" width="500px">
+<img src="/assets/gitstatus2.png" width="500px">
 
-<img src="./assets/gitstatus2vscode.png" width="500px">
+<img src="/assets/gitstatus2vscode.png" width="500px">
 
 Veja que os arquivos da pasta assets não estão mais visíveis como alterados, isso porque eles foram commitados, ou seja, foram salvos em uma nova versão do projeto.
 Agora só o que aparece é o README.md da forma que tínhamos antes, vamos fazer um commit adicionando ele, para isso, lembrem-se: vamos adicionar o arquivo ao *Stage* com `git add README.md`e depois vamos fazer um commit com `git commit -m 'Adicionando README.md'`, e vamos ver novamente o que o git nos mostra com `git status`;
 
-<img src="./assets/gitstatus3.png" width="500px">
+<img src="/assets/gitstatus3.png" width="500px">
 
-<img src="./assets/gitstatus3vscode.png" width="500px">
+<img src="/assets/gitstatus3vscode.png" width="500px">
 
 Absolutamente nada, o nosso projeto está atualizado, com as últimas alterações feitas até agora, porém, percebam que eu ainda não terminei de fazer esse tutorial, e ainda estou adicionando fotos e mensagens no README.md, vamos ver o que aparece com essas alterações novamente `git status`;
 
-<img src="./assets/gitstatus4.png" width="500px">
+<img src="/assets/gitstatus4.png" width="500px">
 
-<img src="./assets/gitstatus4vscode.png" width="500px">
+<img src="/assets/gitstatus4vscode.png" width="500px">
 
 Com relação as novas imagens, não tem nenhuma mudança, elas estão marcadas como *Untracked* com o 'U' do lado, porém o nosso README.md está diferente, Ele está num novo campo "Changes not staged for commit", marcado com o 'M' do lado, isso indica que ele foi modificado, tanto é, que no terminal aparece o texto "modified:". 
 Vamos dessa vez adicionar todos os arquivos juntos no próximo commit, e existe um comando pra isso:
@@ -146,19 +146,19 @@ git add .
 
 Usar o "." no final indica que você está adicionando tudo que está dentro da nossa pasta principal, uma espiadinha com `git status`novamente:
 
-<img src="./assets/gitstatus5.png" width="500px">
+<img src="/assets/gitstatus5.png" width="500px">
 
-<img src="./assets/gitstatus5vscode.png" width="500px">
+<img src="/assets/gitstatus5vscode.png" width="500px">
 
 No terminal, vejam que tudo é muito parecido, todos os arquivos agora estão em "Changes to be committed", a novidade é que o README.md está marcado como "modified:", no vscode aparecem todos os arquivos no campo "Staged Changes", e ao fazer o commit, todos sairão de lá, e o projeto estará em uma nova versão, `git commit -m "Último commit"`, vou deixar essa imagem mostrando o que aparece quando você faz o commit;
 
-<img src="./assets/gitcommit.png" width="500px">
+<img src="/assets/gitcommit.png" width="500px">
 
 Vejam, 7 arquivos foram salvos (eu coloquei algumas imagems a mais), 31 linhas inseridas, 3 linhas deletadas (eu fiz algumas alterações nesse texto também, que vovês só vão perceber se baixarem o projeto, e começarem a voltar nos commits);
 
 Por fim, existe o comando `git log` que mais mostrar o que aconteceu no seu projeto ao longo do tempo, vamos dar uma olhada no nosso projeto
 
-<img src="./assets/gitlog.png" width="500px">
+<img src="/assets/gitlog.png" width="500px">
 
 O histórico do git me mostra que a primeira coisa que fiz foi um commit com o nome de "Adicionando fotos da pasta assets", num Domingo ("Sun" de Sunday) no dia 7 de Março (Mar 7) as 09:42:02 (horas:minutos:segundos) de 2021 com o fuso-horário -0300 (indicando -03:00)
 
@@ -172,7 +172,7 @@ Esse Lugar é chamado pelo git de *REMOTE*, e ele pode ser qualquer local: o ser
 
 Vamos criar um repositório no github, e fazer um PUSH para ele;
 
-<img src="./assets/newrepository.png" width="500px">
+<img src="/assets/newrepository.png" width="500px">
 
 Como configurações no github, eu deixei ele como repositório Privado, e selecionei para criar um README.md, outras opções importantes é sobre adicionar um .gitignore e uma licença
 
@@ -194,7 +194,7 @@ git remote add origin https://github.com/Matan18/git-tutorial.git
 
 O comando não é complexo, o que estamos fazendo, basicamenteo, é acessando a funcionalidade *add* do *remote* do *git* passando como parâmetros o apelido desse remote "origin", e o local dele `https://github.com/Matan18/git-tutorial.git`, podemos verificar todos os repositórios que adicionamos com o comando `git remote -v`, e temos a seguinte imagem:
 
-<img src="./assets/gitremoteverbose.png" width="500px">
+<img src="/assets/gitremoteverbose.png" width="500px">
 
 Temos 2 remotes, pois um serve para fazermos a busca do projeto (fetch), e outro para a publicação dele (push);
 
@@ -206,7 +206,7 @@ git push origin main
 
 E temos um erro no comando (eu juro que foi de propósito);
 
-<img src="./assets/gitpusherror.png" width="500px">
+<img src="/assets/gitpusherror.png" width="500px">
 
 Esse erro acontece pois o nosso repositório no github tem informações que não existem no nosso projeto local (criamos o arquivo README.md com o título do nosso projeto lá no momento que criamos o repositório, e aquele arquivo não aparece no nosso histórico local), para termos esse arquivo localmente, temos que fazer a busca dessas informações, e usaremos o *pull* para puxar as informações, precisamos passar uma flag depois do `origin main`, que vai fazer com que o git permita que o histórico de alterações não esteja de acordo com o github;
 
@@ -216,8 +216,8 @@ git pull origin main --allow-unrelated-histories
 
 Fazendo isso temos uma espécie de erro no nosso git, mas não é dificil de resolver
 
-<img src="./assets/gitmergeerror.png" width="500px">
-<img src="./assets/gitmergeerrorvscode.png" width="500px">
+<img src="/assets/gitmergeerror.png" width="500px">
+<img src="/assets/gitmergeerrorvscode.png" width="500px">
 
 Isso indica que os dois arquivos contem informações completamente diferentes, por isso o deixa você escolher qual informação deve ser mantida, e o seu arquivo vai ser alterado com base nessas informações da seguinte forma:
 
@@ -254,24 +254,24 @@ Através de Pull Requests!
 
 Para poder fazer um pull request, você deve fazer o fork do repositório (tem um botão escrito fork em cima do repositório, basta clicar lá e ir confirmando), assim você terá uma cópia do código no seu github mesmo, e por enquanto é nele que você vai mexer, e pra mexer no seu repositório basta você seguir os passos que expliquei acima (alterar o código, `git add ...`, `git commit ...`, `git push ...`), assim que o código no seu github estiver atualizado, vai aparecer uma mensagem mostrando que você pode fazer um pull request.
 
-<img src="./assets/pullrequest.png" width="500px">
+<img src="/assets/pullrequest.png" width="500px">
 
 Você só precisa clicar ali, e seguir os passos. Vai aparecer duas caixas de texto, uma para um título resumido, outra para você descrever suas alterações.
 
-<img src="./assets/pullrequestcomment.png" width="500px">
+<img src="/assets/pullrequestcomment.png" width="500px">
 
 Basta preencher (se achar necessário), depois clicar em Create Pull Request novamente. 
 Vai aparecer uma nova página informando que o Pull Request foi aberto, agora está nas mãos do dono do repositório confirmar.
 
-<img src="./assets/pullrequestopened.png" width="500px">
+<img src="/assets/pullrequestopened.png" width="500px">
 
 O dono do repositório vai receber a notificação que há um pull request, também poderá verificar na aba de Pull Requests do seu repositório .
 
-<img src="./assets/prtab.png" width="300px">
+<img src="/assets/prtab.png" width="300px">
 
 E ao acessar o pull request em questão, vai ver uma página onde pode discutir sobre as alterações, exigir novas alterações, ou até tirar dúvidas sobre as alterações se necessário.
 
-<img src="./assets/recievedpullrequest.png" width="500px">
+<img src="/assets/recievedpullrequest.png" width="500px">
 
 Assim que quiser, pode confirmar as alterações clicando em Merge Pull Request.
 
