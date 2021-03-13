@@ -2,6 +2,8 @@
 
 Esse é um tutorial para aqueles que não sabem nada sobre git, o intuito desse repositório é explicar o básico sobre como manipular arquivos no git e como fazer commit/push/pull requests
 
+Se vocês acharem que a explicação está complicada, e precisam de uma forma mais fácil, leiam a segunda parte do [outro arquivo](https://github.com/Matan18/git-tutorial/blob/main/CampPush.md)
+
 #### Disclaimer
 
 Só gostaria de lembrar de tomar cuidado quando falamos de git e github, apesar de serem usadas em conjunto, são duas coisas diferentes, git é um *sistema de controle de versões*, muito usado para desenvolvimento de softwares; Já o github é uma *plataforma de hospedagem de código* que usa git para controle de versão;
