@@ -22,7 +22,29 @@ Ao fazer isso deve aparecer a versão do git que foi instalada, no meu caso, ess
 git version 2.30.0.windows.2
 ```
 
-Caso não apareça nada, achei esse link da [hostinger](https://www.hostinger.com.br/tutoriais/tutorial-do-git-basics-introducao) mostrando como instalar nos 3 principais sistemas operacionais (Mac, Windows e Debian/Ubuntu que são 2 versões de Linux), para se certificar que o git está instalado corretamente, reinicie o terminal (feche o powershell/cmd/terminal (no Mac)/bash(do Linux)/... depois abra-o novamente) e rode o comando que mostrei acima.
+Caso não apareça nada, basta seguir os tutoriais básicos para instalação abaixo:
+
+### Instalação
+
+#### Windows
+
+Para a instalação no Windows é simples, basta realizar o download do Git através do [site oficial](https://git-scm.com/download/) da versão de [32 bits]() ou de [64 bits]() e seguir o fluxo de instalação padrão. (Famoso: next, next, next, finish)
+
+#### Linux/Unix
+
+Para instalar no Linux/Unix basta seguir uma das opções abaixo:
+- Debian: `# apt-get install git`;
+- Fedora 21: `# yum install git`;
+- Fedora 22+: `# dnf install git`;
+- FreeBSD: `# pkg install git`;
+- Para demais distribuições visite a [página de instalação oficial](https://git-scm.com/download/linux) para distribuições Linux/Unix.
+
+#### macOS
+
+Para instalar no macOS basta seguir uma das opções a baixo:
+- Pelo [Homebrew](https://brew.sh/) basta utilizar o comando `$ brew install git`;
+- Pelo [Xcode](https://developer.apple.com/xcode/) ele já vem instalado por padrão;
+- E para demais instalações, basta seguir os [tutoriais na página oficial](https://git-scm.com/download/mac) de instalação do macOX.
 
 ## Configurações iniciais
 
